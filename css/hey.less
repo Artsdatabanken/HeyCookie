@@ -1,0 +1,38 @@
+@color-text: #fff;
+@color-background: #3b2fff;
+@color-button: #2cc306;
+
+div.heyCookie {
+  background: @color-background;
+  border: medium solid @color-text;
+  border-bottom: none;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  bottom: 0;
+  color: @color-text;
+  font-family: sans-serif;
+  font-size: 1rem;
+  left: 50%;
+  padding: .2rem 0.3rem;
+  position: absolute;
+  transform: translate(-50%);
+
+  &>*{
+    margin: 0 .2rem;
+  }
+
+  a, button {
+    background: @color-button;
+    border: thin solid tint(@color-button, 50);
+    border-radius: .5em;
+    color: @color-text;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 0.2em 0.3em;
+  }
+  a {
+    background: @color-text;
+    border-color: tint(@color-background, 50);
+    color: @color-background;
+  }
+}
