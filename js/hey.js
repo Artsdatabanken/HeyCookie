@@ -1,7 +1,6 @@
 /**
  * Informasjonskapselvarsel for Artsdatabanken
- * @type {*|{hey, init}}
- */
+  */
 window.heyCookie = window.heyCookie || (function(){
   var settings = {
     notice: 'Denne siden bruker informasjonskapser', // Informasjonsteksten
@@ -9,11 +8,11 @@ window.heyCookie = window.heyCookie || (function(){
     lnkText: 'Les mer', // Lenketekst
     lnkHref: 'https://example.com', // lenkemål
     lsId: 'heyCookie', // Id brukt av localstorage
-    className: 'heyCookie', // Klassen infoboksenbruker
+    className: 'heyCookie', // Klassen infoboksen bruker
   };
 
   // Les settings satt direkte på script-elementet
- var script = document.querySelector('script[src*="hey.js"], script[src*="hey.mini.js"]');
+ var script = document.querySelector('script[src*="hey.js"], script[src*="hey.min.js"]');
  if (script && script.dataset) {
    Object.keys(script.dataset).forEach(function(k){
      settings[k] = script.dataset[k];
@@ -35,7 +34,7 @@ window.heyCookie = window.heyCookie || (function(){
     hey.appendChild(lnk);
     document.body.appendChild(hey);
 
-    // Bruk gammel event syntax for mest mulig bakoverkkompabilitet
+    // Bruk gammel eventsyntaks for mest mulig bakoverkkompabilitet
     btn.onclick = doIt;
     btn.onkeydown = doIt;
   };
