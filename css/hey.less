@@ -1,21 +1,22 @@
 @color-text: #fff;
-@color-background: #3b2fff;
+@color-background: #4c4a48;
 @color-button: #2cc306;
+@font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-size: 15px;
 
 div.heyCookie {
   background: @color-background;
-  border: medium solid @color-text;
-  border-bottom: none;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border: none;
+  border-top: thin solid @color-text;
   bottom: 0;
+  left: 0;
   color: @color-text;
   font-family: sans-serif;
-  font-size: 1rem;
-  left: 50%;
+  font-size: @font-size;
   padding: .2rem 0.3rem;
-  position: absolute;
-  transform: translate(-50%);
+  position: fixed;
+  width: 100%;
+  text-align: center;
 
   &>*{
     margin: 0 .2rem;
@@ -24,11 +25,13 @@ div.heyCookie {
   a, button {
     background: @color-button;
     border: thin solid tint(@color-button, 50);
-    border-radius: .5em;
     color: @color-text;
     cursor: pointer;
-    font-size: 0.9em;
-    padding: 0.2em 0.3em;
+    font-size: 0.85em;
+    padding: 5px 10px;
+    display: inline-block;
+    line-height: 1.5;
+    outline: none;
   }
   a {
     background: @color-text;
